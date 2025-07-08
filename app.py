@@ -46,3 +46,10 @@ if st.button("Predict Price"):
     
     except ValueError:
         st.error("❌ Please enter valid numeric inputs.")
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 8051))
+    import streamlit.web.cli as stcli
+    import sys
+    sys.argv = ["streamlit", "run", "app.py", "--server.port", str(port), "--server.enableCORS", "false"]
+    sys.exit(stcli.main())
