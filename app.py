@@ -4,7 +4,7 @@ import pickle as pk
 import streamlit as st 
 
 # Load the model
-model = pk.load(open('car_price predection.pkl', 'rb'))
+model = pk.load(open('car_price_predection.pkl', 'rb'))
 
 # Title and labels
 st.header('🚗 CARS PRICE PREDICTOR')
